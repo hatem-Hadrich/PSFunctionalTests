@@ -3,7 +3,6 @@ var should = require('should');
 var common = require('../../common.webdriverio');
 var globals = require('../../globals.webdriverio.js');
 var path = require('path');
-var toUpload = path.join(__dirname, '../..', 'datas', 'image_test.jpg');
 var devMode = false;
 var exit_welcome = false;
 
