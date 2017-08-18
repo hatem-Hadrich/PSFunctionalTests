@@ -405,6 +405,7 @@ describe('The Product Creation', function () {
                 .scroll(0, 900)
                 .waitForExist(this.selector.specific_price_condition_apply_button, 90000)
                 .click(this.selector.specific_price_condition_apply_button)
+                .pause(3000)
                 .call(done);
         });
 
