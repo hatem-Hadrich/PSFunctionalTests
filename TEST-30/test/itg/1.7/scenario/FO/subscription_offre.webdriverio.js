@@ -3,7 +3,7 @@ var should = require('should');
 var common = require('../../common.webdriverio');
 var globals = require('../../globals.webdriverio.js');
 
-describe('The Creation of an Account Prestashop in Front Office', function () {
+describe('The Subscription offers in Front Office', function () {
     common.initMocha.call(this);
 
     before(function (done) {
@@ -26,6 +26,15 @@ describe('The Creation of an Account Prestashop in Front Office', function () {
                 .waitForExist(this.selector.PrestashopOffre.password_input, 90000)
                 .setValue(this.selector.PrestashopOffre.password_input, 'prestashop123')
                 .pause(5000)
+                .call(done);
+        });
+
+        it('should click on sign in button', function (done) {
+            global.fctname = this.test.title;
+            this.client
+                .waitForExist(this.selector.PrestashopOffre.signin_button, 90000)
+                .click(this.selector.PrestashopOffre.signin_button)
+                .pause(2000)
                 .call(done);
         });
 

@@ -32,6 +32,9 @@ module.exports = {
 
         PrestashopOffre:{
             logo_img: '//*[@id="app"]/div[1]/div/div/div/a/img',
+            email_input:'//*[@id="app"]/div[2]/div[2]/div[2]/form/div/div[2]/input',
+            password_input:'//*[@id="app"]/div[2]/div[2]/div[2]/form/div/div[4]/input',
+            signin_button:'//*[@id="app"]/div[2]/div[2]/div[2]/form/div/div[4]/input',
             choose_package_button: '//*[@id="app"]/div[2]/div[2]/div[2]/div/div[2]/div[1]/div[2]/a',
             select_button: '//*[@id="app"]/div[2]/div[2]/div[2]/div[1]/div/button',
             first_name_input: '//*[@id="first_name"]',
