@@ -32,113 +32,113 @@ describe('The Product Creation', function () {
         });
     });
 
-    // describe('Edit price display method', function (done) {
-    //     it('should go to customers settings > Group', function (done) {
-    //         global.fctname = this.test.title;
-    //         if (exit_welcome) {
-    //             this.client
-    //                 .waitForExist(this.selector.exit_welcome, 90000)
-    //                 .click(this.selector.exit_welcome);
-    //         }
-    //         this.client
-    //             .waitForExist(this.selector.shop_parameters_maintab, 90000)
-    //             .moveToObject(this.selector.shop_parameters_maintab)
-    //             .waitForExist(this.selector.customer_settings_subtab, 90000)
-    //             .click(this.selector.customer_settings_subtab)
-    //             .waitForExist(this.selector.group_tab, 90000)
-    //             .click(this.selector.group_tab)
-    //             .call(done);
-    //     });
-    //     it('should click on edit visitor', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .waitForExist(this.selector.edit_visitor_button, 90000)
-    //             .click(this.selector.edit_visitor_button)
-    //             .pause(3000)
-    //             .call(done);
-    //     });
-    //     it('should select tax excluded in Price display method', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .waitForExist(this.selector.price_display_method_select, 90000)
-    //             .selectByValue(this.selector.price_display_method_select, 1)
-    //             .pause(3000)
-    //             .call(done);
-    //     });
-    //     it('should click on save button', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .waitForExist(this.selector.edit_visitor_save_button, 90000)
-    //             .moveToObject(this.selector.edit_visitor_save_button)
-    //             .click(this.selector.edit_visitor_save_button)
-    //             .call(done);
-    //     });
-    // });
-    //
-    // describe('Add new tax rules', function (done) {
-    //     it('should go to international > Taxes', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .waitForExist(this.selector.international_maintab, 90000)
-    //             .moveToObject(this.selector.international_maintab)
-    //             .waitForExist(this.selector.taxes_subtab, 90000)
-    //             .click(this.selector.taxes_subtab)
-    //             .pause(3000)
-    //             .call(done);
-    //     });
-    //     it('should go to taxe rule', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .waitForExist(this.selector.taxes_rules_tab, 90000)
-    //             .click(this.selector.taxes_rules_tab)
-    //             .pause(3000)
-    //             .call(done);
-    //     });
-    //     it('should click on add new tax rule button', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .waitForExist(this.selector.add_new_tax_rule_button, 90000)
-    //             .click(this.selector.add_new_tax_rule_button)
-    //             .pause(3000)
-    //             .call(done);
-    //     });
-    //     it('should enter the name of tax rule', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .waitForExist(this.selector.name_tax_rule_input, 90000)
-    //             .setValue(this.selector.name_tax_rule_input, "VAT (23%)")
-    //             .pause(3000)
-    //             .call(done);
-    //     });
-    //     it('should click on enable tax rule', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .waitForExist(this.selector.enable_tax_rule_toggle, 90000)
-    //             .click(this.selector.enable_tax_rule_toggle)
-    //             .call(done);
-    //     });
-    //     it('should click on save and stay button', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .waitForExist(this.selector.save_and_stay_tax_rule_button, 90000)
-    //             .click(this.selector.save_and_stay_tax_rule_button)
-    //             .call(done);
-    //     });
-    //     it('should select tax', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .waitForExist(this.selector.tax_select, 90000)
-    //             .selectByValue(this.selector.tax_select, 19)
-    //             .call(done);
-    //     });
-    //     it('should click on save and stay button', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .waitForExist(this.selector.save_and_stay_new_tax_rule_button, 90000)
-    //             .click(this.selector.save_and_stay_new_tax_rule_button)
-    //             .call(done);
-    //     });
-    // });
+    describe('Edit price display method', function (done) {
+        it('should go to customers settings > Group', function (done) {
+            global.fctname = this.test.title;
+            if (exit_welcome) {
+                this.client
+                    .waitForExist(this.selector.exit_welcome, 90000)
+                    .click(this.selector.exit_welcome);
+            }
+            this.client
+                .waitForExist(this.selector.shop_parameters_maintab, 90000)
+                .moveToObject(this.selector.shop_parameters_maintab)
+                .waitForExist(this.selector.customer_settings_subtab, 90000)
+                .click(this.selector.customer_settings_subtab)
+                .waitForExist(this.selector.group_tab, 90000)
+                .click(this.selector.group_tab)
+                .call(done);
+        });
+        it('should click on edit visitor', function (done) {
+            global.fctname = this.test.title;
+            this.client
+                .waitForExist(this.selector.edit_visitor_button, 90000)
+                .click(this.selector.edit_visitor_button)
+                .pause(3000)
+                .call(done);
+        });
+        it('should select tax excluded in Price display method', function (done) {
+            global.fctname = this.test.title;
+            this.client
+                .waitForExist(this.selector.price_display_method_select, 90000)
+                .selectByValue(this.selector.price_display_method_select, 1)
+                .pause(3000)
+                .call(done);
+        });
+        it('should click on save button', function (done) {
+            global.fctname = this.test.title;
+            this.client
+                .waitForExist(this.selector.edit_visitor_save_button, 90000)
+                .moveToObject(this.selector.edit_visitor_save_button)
+                .click(this.selector.edit_visitor_save_button)
+                .call(done);
+        });
+    });
+
+    describe('Add new tax rules', function (done) {
+        it('should go to international > Taxes', function (done) {
+            global.fctname = this.test.title;
+            this.client
+                .waitForExist(this.selector.international_maintab, 90000)
+                .moveToObject(this.selector.international_maintab)
+                .waitForExist(this.selector.taxes_subtab, 90000)
+                .click(this.selector.taxes_subtab)
+                .pause(3000)
+                .call(done);
+        });
+        it('should go to taxe rule', function (done) {
+            global.fctname = this.test.title;
+            this.client
+                .waitForExist(this.selector.taxes_rules_tab, 90000)
+                .click(this.selector.taxes_rules_tab)
+                .pause(3000)
+                .call(done);
+        });
+        it('should click on add new tax rule button', function (done) {
+            global.fctname = this.test.title;
+            this.client
+                .waitForExist(this.selector.add_new_tax_rule_button, 90000)
+                .click(this.selector.add_new_tax_rule_button)
+                .pause(3000)
+                .call(done);
+        });
+        it('should enter the name of tax rule', function (done) {
+            global.fctname = this.test.title;
+            this.client
+                .waitForExist(this.selector.name_tax_rule_input, 90000)
+                .setValue(this.selector.name_tax_rule_input, "VAT (23%)")
+                .pause(3000)
+                .call(done);
+        });
+        it('should click on enable tax rule', function (done) {
+            global.fctname = this.test.title;
+            this.client
+                .waitForExist(this.selector.enable_tax_rule_toggle, 90000)
+                .click(this.selector.enable_tax_rule_toggle)
+                .call(done);
+        });
+        it('should click on save and stay button', function (done) {
+            global.fctname = this.test.title;
+            this.client
+                .waitForExist(this.selector.save_and_stay_tax_rule_button, 90000)
+                .click(this.selector.save_and_stay_tax_rule_button)
+                .call(done);
+        });
+        it('should select tax', function (done) {
+            global.fctname = this.test.title;
+            this.client
+                .waitForExist(this.selector.tax_select, 90000)
+                .selectByValue(this.selector.tax_select, 19)
+                .call(done);
+        });
+        it('should click on save and stay button', function (done) {
+            global.fctname = this.test.title;
+            this.client
+                .waitForExist(this.selector.save_and_stay_new_tax_rule_button, 90000)
+                .click(this.selector.save_and_stay_new_tax_rule_button)
+                .call(done);
+        });
+    });
 
     describe('Create new product', function (done) {
         it("should click on add new product button", function (done) {
