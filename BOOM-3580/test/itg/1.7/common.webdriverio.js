@@ -95,11 +95,13 @@ module.exports = {
                 client = webdriverio
                     .remote(options2)
                     .init()
+                    .windowHandleSize({width: 1680, height: 1050})
                     //.windowHandleMaximize()
             } else {
                 client = webdriverio
                     .remote(options)
                     .init()
+                    .windowHandleSize({width: 1680, height: 1050})
                     //.windowHandleMaximize()
             }
             initCommands(client);
