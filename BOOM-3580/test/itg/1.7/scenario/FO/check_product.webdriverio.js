@@ -45,7 +45,7 @@ describe('The Check of the Product in Front Office', function () {
                 var my_price = text;
                 should(my_price).be.equal("€10.00");
             })
-                .click(this.selector.product_name_img)
+                .click(this.selector.ProductDetails.product_name_img)
                 .call(done);
         });
     });
@@ -55,11 +55,11 @@ describe('The Check of the Product in Front Office', function () {
         it('should check the quantity', function (done) {
             global.fctname = this.test.title;
             this.client
-                .getAttribute(this.selector.product_discounts_table + '/tr[1]', 'data-discount-quantity').then(function (quantity) {
+                .getAttribute(this.selector.ProductDetails.product_discounts_table + '/tr[1]', 'data-discount-quantity').then(function (quantity) {
                 should(parseInt(quantity)).be.equal(quantity1);
             })
                 .pause(3000)
-                .getAttribute(this.selector.product_discounts_table + '/tr[2]', 'data-discount-quantity').then(function (quantity) {
+                .getAttribute(this.selector.ProductDetails.product_discounts_table + '/tr[2]', 'data-discount-quantity').then(function (quantity) {
                 should(parseInt(quantity)).be.equal(quantity2);
             })
                 .call(done);
@@ -68,11 +68,11 @@ describe('The Check of the Product in Front Office', function () {
         it('should check the discount', function (done) {
             global.fctname = this.test.title;
             this.client
-                .getAttribute(this.selector.product_discounts_table + '/tr[1]', 'data-discount').then(function (discount) {
+                .getAttribute(this.selector.ProductDetails.product_discounts_table + '/tr[1]', 'data-discount').then(function (discount) {
                 var discount_price = priceTE - price1;
                 should(parseFloat(discount)).be.equal(discount_price);
             })
-                .getAttribute(this.selector.product_discounts_table + '/tr[2]', 'data-discount').then(function (discount) {
+                .getAttribute(this.selector.ProductDetails.product_discounts_table + '/tr[2]', 'data-discount').then(function (discount) {
                 var discount_price = priceTE - price2;
                 should(parseFloat(discount)).be.equal(discount_price);
             })
@@ -82,11 +82,11 @@ describe('The Check of the Product in Front Office', function () {
         it('should check the save price', function (done) {
             global.fctname = this.test.title;
             this.client
-                .getText(this.selector.product_discounts_table + '/tr[1]/td[3]').then(function (save_price) {
+                .getText(this.selector.ProductDetails.product_discounts_table + '/tr[1]/td[3]').then(function (save_price) {
                 var save = parseFloat(quantity1 * (priceTE - price1)).toFixed(2);
                 should(save_price).be.equal('Up to €' + save);
             })
-                .getText(this.selector.product_discounts_table + '/tr[2]/td[3]').then(function (save_price) {
+                .getText(this.selector.ProductDetails.product_discounts_table + '/tr[2]/td[3]').then(function (save_price) {
                 var save = parseFloat(quantity2 * (priceTE - price2)).toFixed(2);
                 should(save_price).be.equal('Up to €' + save);
             })

@@ -40,36 +40,36 @@ describe('The Product Creation', function () {
                     .click(this.selector.exit_welcome);
             }
             this.client
-                .waitForExist(this.selector.shop_parameters_maintab, 90000)
-                .moveToObject(this.selector.shop_parameters_maintab)
-                .waitForExist(this.selector.customer_settings_subtab, 90000)
-                .click(this.selector.customer_settings_subtab)
-                .waitForExist(this.selector.group_tab, 90000)
-                .click(this.selector.group_tab)
+                .waitForExist(this.selector.Group.shop_parameters_maintab, 90000)
+                .moveToObject(this.selector.Group.shop_parameters_maintab)
+                .waitForExist(this.selector.Group.customer_settings_subtab, 90000)
+                .click(this.selector.Group.customer_settings_subtab)
+                .waitForExist(this.selector.Group.group_tab, 90000)
+                .click(this.selector.Group.group_tab)
                 .call(done);
         });
         it('should click on edit visitor', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.edit_visitor_button, 90000)
-                .click(this.selector.edit_visitor_button)
+                .waitForExist(this.selector.Group.edit_visitor_button, 90000)
+                .click(this.selector.Group.edit_visitor_button)
                 .pause(3000)
                 .call(done);
         });
         it('should select tax excluded in Price display method', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.price_display_method_select, 90000)
-                .selectByValue(this.selector.price_display_method_select, 1)
+                .waitForExist(this.selector.Group.price_display_method_select, 90000)
+                .selectByValue(this.selector.Group.price_display_method_select, 1)
                 .pause(3000)
                 .call(done);
         });
         it('should click on save button', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.edit_visitor_save_button, 90000)
-                .moveToObject(this.selector.edit_visitor_save_button)
-                .click(this.selector.edit_visitor_save_button)
+                .waitForExist(this.selector.Group.edit_visitor_save_button, 90000)
+                .moveToObject(this.selector.Group.edit_visitor_save_button)
+                .click(this.selector.Group.edit_visitor_save_button)
                 .call(done);
         });
     });
@@ -78,63 +78,63 @@ describe('The Product Creation', function () {
         it('should go to international > Taxes', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.international_maintab, 90000)
-                .moveToObject(this.selector.international_maintab)
-                .waitForExist(this.selector.taxes_subtab, 90000)
-                .click(this.selector.taxes_subtab)
+                .waitForExist(this.selector.Tax.international_maintab, 90000)
+                .moveToObject(this.selector.Tax.international_maintab)
+                .waitForExist(this.selector.Tax.taxes_subtab, 90000)
+                .click(this.selector.Tax.taxes_subtab)
                 .pause(3000)
                 .call(done);
         });
         it('should go to taxe rule', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.taxes_rules_tab, 90000)
-                .click(this.selector.taxes_rules_tab)
+                .waitForExist(this.selector.Tax.taxes_rules_tab, 90000)
+                .click(this.selector.Tax.taxes_rules_tab)
                 .pause(3000)
                 .call(done);
         });
         it('should click on add new tax rule button', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.add_new_tax_rule_button, 90000)
-                .click(this.selector.add_new_tax_rule_button)
+                .waitForExist(this.selector.Tax.add_new_tax_rule_button, 90000)
+                .click(this.selector.Tax.add_new_tax_rule_button)
                 .pause(3000)
                 .call(done);
         });
         it('should enter the name of tax rule', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.name_tax_rule_input, 90000)
-                .setValue(this.selector.name_tax_rule_input, "VAT (23%)")
+                .waitForExist(this.selector.Tax.name_tax_rule_input, 90000)
+                .setValue(this.selector.Tax.name_tax_rule_input, "VAT (23%)")
                 .pause(3000)
                 .call(done);
         });
         it('should click on enable tax rule', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.enable_tax_rule_toggle, 90000)
-                .click(this.selector.enable_tax_rule_toggle)
+                .waitForExist(this.selector.Tax.enable_tax_rule_toggle, 90000)
+                .click(this.selector.Tax.enable_tax_rule_toggle)
                 .call(done);
         });
         it('should click on save and stay button', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.save_and_stay_tax_rule_button, 90000)
-                .click(this.selector.save_and_stay_tax_rule_button)
+                .waitForExist(this.selector.Tax.save_and_stay_tax_rule_button, 90000)
+                .click(this.selector.Tax.save_and_stay_tax_rule_button)
                 .call(done);
         });
         it('should select tax', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.tax_select, 90000)
-                .selectByValue(this.selector.tax_select, 19)
+                .waitForExist(this.selector.Tax.tax_select, 90000)
+                .selectByValue(this.selector.Tax.tax_select, 19)
                 .call(done);
         });
         it('should click on save and stay button', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.save_and_stay_new_tax_rule_button, 90000)
-                .click(this.selector.save_and_stay_new_tax_rule_button)
+                .waitForExist(this.selector.Tax.save_and_stay_new_tax_rule_button, 90000)
+                .click(this.selector.Tax.save_and_stay_new_tax_rule_button)
                 .call(done);
         });
     });
@@ -196,13 +196,13 @@ describe('The Product Creation', function () {
         it('should select tax rule of product', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.product_tax_rule_select, 90000)
-                .click(this.selector.product_tax_rule_select)
+                .waitForExist(this.selector.Product.product_tax_rule_select, 90000)
+                .click(this.selector.Product.product_tax_rule_select)
                 .pause(3000)
-                .waitForExist(this.selector.product_tax_rule_option, 90000)
-                .click(this.selector.product_tax_rule_option)
+                .waitForExist(this.selector.Product.product_tax_rule_option, 90000)
+                .click(this.selector.Product.product_tax_rule_option)
                 .pause(3000)
-                .getValue(this.selector.product_price_ttc_shortcut_input).then(function (price_value) {
+                .getValue(this.selector.Product.product_price_ttc_shortcut_input).then(function (price_value) {
                 global.tax_included_price = price_value;
                 should(price_value).be.equal('12.3');
             })
@@ -270,8 +270,8 @@ describe('The Product Creation', function () {
             global.fctname = this.test.title;
             this.client
                 .pause(5000)
-                .waitForExist(this.selector.product_pricing_tab, 90000)
-                .click(this.selector.product_pricing_tab)
+                .waitForExist(this.selector.Product.product_pricing_tab, 90000)
+                .click(this.selector.Product.product_pricing_tab)
                 .pause(3000)
                 .call(done);
         });
@@ -279,8 +279,8 @@ describe('The Product Creation', function () {
         it('should click on add specific price button', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.add_specific_price_button, 90000)
-                .click(this.selector.add_specific_price_button)
+                .waitForExist(this.selector.Product.add_specific_price_button, 90000)
+                .click(this.selector.Product.add_specific_price_button)
                 .pause(3000)
                 .call(done);
         });
@@ -289,10 +289,10 @@ describe('The Product Creation', function () {
             global.fctname = this.test.title;
             this.client
                 .scroll(0, 900)
-                .waitForExist(this.selector.specific_price_condition_for_users_select, 90000)
-                .click(this.selector.specific_price_condition_for_users_select)
-                .waitForExist(this.selector.specific_price_condition_for_users_option, 90000)
-                .click(this.selector.specific_price_condition_for_users_option)
+                .waitForExist(this.selector.Product.specific_price_condition_for_users_select, 90000)
+                .click(this.selector.Product.specific_price_condition_for_users_select)
+                .waitForExist(this.selector.Product.specific_price_condition_for_users_option, 90000)
+                .click(this.selector.Product.specific_price_condition_for_users_option)
                 .call(done);
         });
 
@@ -300,24 +300,24 @@ describe('The Product Creation', function () {
             global.fctname = this.test.title;
             this.client
                 .scroll(0, 900)
-                .waitForExist(this.selector.specific_price_condition_quantity_input, 90000)
-                .click(this.selector.specific_price_condition_quantity_input)
+                .waitForExist(this.selector.Product.specific_price_condition_quantity_input, 90000)
+                .click(this.selector.Product.specific_price_condition_quantity_input)
                 .execute(function () {
                     document.querySelector('input#form_step2_specific_price_sp_from_quantity').value = "";
                 })
-                .setValue(this.selector.specific_price_condition_quantity_input, quantity1)
+                .setValue(this.selector.Product.specific_price_condition_quantity_input, quantity1)
                 .call(done);
         });
 
         it('should enter the condition product price', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.specific_price_condition_TE_checkbox, 90000)
-                .click(this.selector.specific_price_condition_TE_checkbox)
+                .waitForExist(this.selector.Product.specific_price_condition_TE_checkbox, 90000)
+                .click(this.selector.Product.specific_price_condition_TE_checkbox)
                 .execute(function () {
                     document.querySelector('input#form_step2_specific_price_sp_price').value = "";
                 })
-                .setValue(this.selector.specific_price_condition_TE_input, price1)
+                .setValue(this.selector.Product.specific_price_condition_TE_input, price1)
                 .call(done);
         });
 
@@ -325,18 +325,18 @@ describe('The Product Creation', function () {
             global.fctname = this.test.title;
             this.client
                 .scroll(0, 900)
-                .waitForExist(this.selector.specific_price_condition_tax_select, 90000)
-                .click(this.selector.specific_price_condition_tax_select)
-                .waitForExist(this.selector.specific_price_condition_tax_option, 90000)
-                .click(this.selector.specific_price_condition_tax_option)
+                .waitForExist(this.selector.Product.specific_price_condition_tax_select, 90000)
+                .click(this.selector.Product.specific_price_condition_tax_select)
+                .waitForExist(this.selector.Product.specific_price_condition_tax_option, 90000)
+                .click(this.selector.Product.specific_price_condition_tax_option)
                 .call(done);
         });
 
         it('should click on apply button', function (done) {
             global.fctname = this.test.title;
             this.client
-                .waitForExist(this.selector.specific_price_condition_apply_button, 90000)
-                .click(this.selector.specific_price_condition_apply_button)
+                .waitForExist(this.selector.Product.specific_price_condition_apply_button, 90000)
+                .click(this.selector.Product.specific_price_condition_apply_button)
                 .call(done);
         });
 
@@ -344,8 +344,8 @@ describe('The Product Creation', function () {
             global.fctname = this.test.title;
             this.client
                 .pause(5000)
-                .waitForExist(this.selector.add_specific_price_button, 90000)
-                .click(this.selector.add_specific_price_button)
+                .waitForExist(this.selector.Product.add_specific_price_button, 90000)
+                .click(this.selector.Product.add_specific_price_button)
                 .pause(5000)
                 .call(done);
         });
@@ -354,10 +354,10 @@ describe('The Product Creation', function () {
             global.fctname = this.test.title;
             this.client
                 .scroll(0, 900)
-                .waitForExist(this.selector.specific_price_condition_for_users_select, 90000)
-                .click(this.selector.specific_price_condition_for_users_select)
-                .waitForExist(this.selector.specific_price_condition_for_users_option, 90000)
-                .click(this.selector.specific_price_condition_for_users_option)
+                .waitForExist(this.selector.Product.specific_price_condition_for_users_select, 90000)
+                .click(this.selector.Product.specific_price_condition_for_users_select)
+                .waitForExist(this.selector.Product.specific_price_condition_for_users_option, 90000)
+                .click(this.selector.Product.specific_price_condition_for_users_option)
                 .call(done);
         });
 
@@ -365,12 +365,12 @@ describe('The Product Creation', function () {
             global.fctname = this.test.title;
             this.client
                 .scroll(0, 900)
-                .waitForExist(this.selector.specific_price_condition_quantity_input, 90000)
-                .click(this.selector.specific_price_condition_quantity_input)
+                .waitForExist(this.selector.Product.specific_price_condition_quantity_input, 90000)
+                .click(this.selector.Product.specific_price_condition_quantity_input)
                 .execute(function () {
                     document.querySelector('input#form_step2_specific_price_sp_from_quantity').value = "";
                 })
-                .setValue(this.selector.specific_price_condition_quantity_input, quantity2)
+                .setValue(this.selector.Product.specific_price_condition_quantity_input, quantity2)
                 .call(done);
         });
 
@@ -378,12 +378,12 @@ describe('The Product Creation', function () {
             global.fctname = this.test.title;
             this.client
                 .scroll(0, 900)
-                .waitForExist(this.selector.specific_price_condition_TE_checkbox, 90000)
-                .click(this.selector.specific_price_condition_TE_checkbox)
+                .waitForExist(this.selector.Product.specific_price_condition_TE_checkbox, 90000)
+                .click(this.selector.Product.specific_price_condition_TE_checkbox)
                 .execute(function () {
                     document.querySelector('input#form_step2_specific_price_sp_price').value = "";
                 })
-                .setValue(this.selector.specific_price_condition_TE_input, price2)
+                .setValue(this.selector.Product.specific_price_condition_TE_input, price2)
                 .call(done);
         });
 
@@ -391,10 +391,10 @@ describe('The Product Creation', function () {
             global.fctname = this.test.title;
             this.client
                 .scroll(0, 900)
-                .waitForExist(this.selector.specific_price_condition_tax_select, 90000)
-                .click(this.selector.specific_price_condition_tax_select)
-                .waitForExist(this.selector.specific_price_condition_tax_option, 90000)
-                .click(this.selector.specific_price_condition_tax_option)
+                .waitForExist(this.selector.Product.specific_price_condition_tax_select, 90000)
+                .click(this.selector.Product.specific_price_condition_tax_select)
+                .waitForExist(this.selector.Product.specific_price_condition_tax_option, 90000)
+                .click(this.selector.Product.specific_price_condition_tax_option)
                 .call(done);
         });
 
@@ -402,8 +402,8 @@ describe('The Product Creation', function () {
             global.fctname = this.test.title;
             this.client
                 .scroll(0, 900)
-                .waitForExist(this.selector.specific_price_condition_apply_button, 90000)
-                .click(this.selector.specific_price_condition_apply_button)
+                .waitForExist(this.selector.Product.specific_price_condition_apply_button, 90000)
+                .click(this.selector.Product.specific_price_condition_apply_button)
                 .pause(3000)
                 .call(done);
         });
