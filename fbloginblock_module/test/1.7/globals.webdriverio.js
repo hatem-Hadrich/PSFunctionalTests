@@ -53,6 +53,14 @@ module.exports = {
         customer_address_email_input: '//*[@id="form-customer"]/div/div[2]/table/thead/tr[2]/th[7]/input',
         customer_search_button: '#submitFilterButtoncustomer',
 		facebook_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr[1]/td[6]/img',
+        red_validation: '[class="growl growl-error growl-medium"]',
+        close_validation: '.growl-close',
+        validation_msg: '//*[@id="growls"]/div/div[3]',
+        modules_validate_uninstall: '//a[@class="btn btn-primary uppercase module_action_modal_uninstall"]',
+        install_module_btn: '//div[@data-tech-name="' + module_tech_name + '" and not(@style)]//button[@data-confirm_modal="module-modal-confirm-' + module_tech_name + '-install"]',
+        uninstall_module_list: '//div[@data-tech-name="' + module_tech_name + '" and not(@style)]//button[@class="btn btn-primary-outline  dropdown-toggle"]',
+        uninstall_module_btn: '//div[@data-tech-name="' + module_tech_name + '" and not(@style)]//button[@class="dropdown-item module_action_menu_uninstall"]',
+        modal_confirm_uninstall: '//*[@id="module-modal-confirm-' + module_tech_name + '-uninstall" and @class="modal modal-vcenter fade in"]//a[@class="btn btn-primary uppercase module_action_modal_uninstall"]',
 
 	//FO
 		access_loginFO:'div.user-info > a',

@@ -22,7 +22,7 @@ env:
   global:
     - DOCKER_IMG=prestashop
     - SAUCELABS=None
-    - MODULE_TECHNICAL_NAME=None
+    - MODULE_TECHNICAL_NAME=fbloginblock
   matrix:
     - PS_VERSION=1.7 TAG=1.7
 
