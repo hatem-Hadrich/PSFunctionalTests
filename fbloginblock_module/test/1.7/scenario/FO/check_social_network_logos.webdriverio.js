@@ -18,7 +18,7 @@ describe('Check logos social network in front office', function() {
         it('should open the shop', function (done) {
             global.fctname = this.test.title;
             this.client
-                .url('https://' + URL)
+                .url('http://' + URL)
                 .call(done);
 
         });
