@@ -17,6 +17,11 @@ describe('Allscenario', function(){
 			.call(done);
 	});
 
+    if (typeof module_tech_name !== 'undefined' && module_tech_name != "None") {
+        require('./scenario/BO/install_and_uninstall_module.js');
+        require('./scenario/BO/install_module.js');
+    }
+
     /*--> Check button of social connect in the front office*/
     require('./scenario/FO/check_social_network_logos.webdriverio');
 
@@ -83,4 +88,7 @@ describe('Allscenario', function(){
     require('./scenario/FO/connecting_with_vkontakte.webdriverio');
     require('./scenario/BO/check_customer_connecting_with_vkontakte.webdriverio');
 
+    if (typeof module_tech_name !== 'undefined' && module_tech_name != "None") {
+        require('./scenario/BO/uninstall_module.js');
+    }
 });

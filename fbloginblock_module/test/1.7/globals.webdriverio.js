@@ -6,7 +6,8 @@ var argv = require('minimist')(process.argv.slice(2));
 
 global.date_time = new Date().getTime();
 global.URL = argv.URL;
-global.module_tech_name = argv.MODULE;
+//global.module_tech_name = argv.MODULE;
+global.module_tech_name = "fbloginblock";
 global.browser = argv.browser;
 global.saucelabs = argv.SAUCELABS;
 global._projectdir = path.join(__dirname, '..', '..');
