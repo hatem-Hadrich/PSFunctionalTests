@@ -31,9 +31,9 @@ describe('The Install of a Module and its Uninstall', function () {
             global.fctname = this.test.title;
             this.client
                 .signinBO()
-                .isVisible(this.selector.exit_welcome).then(function (isVisible) {
-                exit_welcome = isVisible;
-            })
+                // .isVisible(this.selector.exit_welcome).then(function (isVisible) {
+                // exit_welcome = isVisible;
+            //})
                 .waitForExist(this.selector.menu, 90000)
                 .call(done);
         });
@@ -43,11 +43,11 @@ describe('The Install of a Module and its Uninstall', function () {
         it('should go to modules page', function (done) {
             global.fctname = this.test.title;
 
-            if (exit_welcome) {
-                this.client
-                    .waitForExist(this.selector.exit_welcome, 90000)
-                    .click(this.selector.exit_welcome);
-            }
+            // if (exit_welcome) {
+            //     this.client
+            //         .waitForExist(this.selector.exit_welcome, 90000)
+            //         .click(this.selector.exit_welcome);
+            // }
             this.client
                 .pause(5000)
                 .click(this.selector.modules_menu)
@@ -188,7 +188,7 @@ describe('The Install of a Module and its Uninstall', function () {
                 }
             }
         });
-    })
+    });
 
     describe('Log out in Back Office', function (done) {
         it('should log out successfully in BO', function (done) {
