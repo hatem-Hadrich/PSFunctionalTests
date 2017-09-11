@@ -6,8 +6,7 @@ var argv = require('minimist')(process.argv.slice(2));
 
 global.date_time = new Date().getTime();
 global.URL = argv.URL;
-//global.module_tech_name = argv.MODULE;
-global.module_tech_name = "fbloginblock";
+global.module_tech_name = argv.MODULE;
 global.browser = argv.browser;
 global.saucelabs = argv.SAUCELABS;
 global._projectdir = path.join(__dirname, '..', '..');
@@ -54,6 +53,7 @@ module.exports = {
         customer_address_email_input: '//*[@id="form-customer"]/div/div[2]/table/thead/tr[2]/th[7]/input',
         customer_search_button: '#submitFilterButtoncustomer',
 		facebook_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr[1]/td[6]/img',
+        nbr_module: '[class="module-sorting-search-wording"]',
         red_validation: '[class="growl growl-error growl-medium"]',
         close_validation: '.growl-close',
         validation_msg: '//*[@id="growls"]/div/div[3]',
