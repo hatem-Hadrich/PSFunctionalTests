@@ -24,7 +24,6 @@ env:
     - SAUCELABS=None
     - MODULE_TECHNICAL_NAME=None
   matrix:
-    - PS_VERSION=1.7 TAG=1.7
     - PS_VERSION=1.7 TAG=1.7 MODULE_TECHNICAL_NAME=fbloginblock
 
 matrix:
@@ -47,8 +46,8 @@ before_script:
 
 script:
   - mkdir screenshots
-  - $TRAVIS_BUILD_DIR/node_modules/mocha/bin/mocha index.webdriverio.js -c --URL=localhost --MODULE=$MODULE_TECHNICAL_NAME --SAUCELABS=$SAUCELABS -t 300000 --reporter mochawesome
-  - curl http://localhost/
+  - $TRAVIS_BUILD_DIR/node_modules/mocha/bin/mocha index.webdriverio.js -c --URL=presto170911-01.staging-prestashopready.net --MODULE=$MODULE_TECHNICAL_NAME --SAUCELABS=$SAUCELABS -t 300000 --reporter mochawesome
+  - curl http://presto170911-01.staging-prestashopready.net/
 
 after_script:
   - docker logs prestashop

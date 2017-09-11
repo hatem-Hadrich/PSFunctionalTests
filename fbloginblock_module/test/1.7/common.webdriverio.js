@@ -39,10 +39,10 @@ function initCommands(client) {
     client.addCommand('signinBO', function(cb) {
 		this.selector = globals.selector;
 		client
-			.url('http://' + URL + '/admin-dev')
+			.url('https://' + URL + '/backoffice/')
 			.waitForExist(this.selector.login, 90000)
-            .setValue(this.selector.login, 'demo@prestashop.com')
-            .setValue(this.selector.password, 'prestashop_demo')
+            .setValue(this.selector.login, 'remi.gaillard@prestashop.com')
+            .setValue(this.selector.password, 'abcd1234')
             .click(this.selector.login_btn)
             .waitForExist(this.selector.menu, 90000)
 			.call(cb);
@@ -51,7 +51,7 @@ function initCommands(client) {
     client.addCommand('signinFO', function(cb) {
 		this.selector = globals.selector;
         client
-			.url('http://' + URL)
+			.url('https://' + URL)
 			.waitForExist(this.selector.access_loginFO, 90000)
 			.click(this.selector.access_loginFO)
 			.waitForExist(this.selector.loginFO, 90000)
