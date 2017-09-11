@@ -25,6 +25,7 @@ env:
     - MODULE_TECHNICAL_NAME=fbloginblock
   matrix:
     - PS_VERSION=1.7 TAG=1.7
+    - PS_VERSION=1.7 TAG=1.7 MODULE_TECHNICAL_NAME=autoupgrade
 
 matrix:
   fast_finish: true
