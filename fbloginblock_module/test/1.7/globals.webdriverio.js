@@ -181,6 +181,22 @@ module.exports = {
 
             //BO
             pinterest_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            pinterest_config_btn: '//*[@id="navtabs16"]/li[18]/a',
+            pinterest_developers_link: '//*[@id="pinterest"]/div/div/fieldset/div[3]/a',
+            site_url_input: '//*[@id="pinterest"]/div/div/fieldset/div[8]/input',
+            redirect_url_input: '//*[@id="pinterest"]/div/div/fieldset/div[9]/input',
+            customer_key_input: '//*[@id="pici"]',
+            customer_secret_input: '//*[@id="pics"]',
+            save_button: '//*[@id="module_form_submit_btn_32"]',
+
+            //pinterest site
+            app_link: '//*[@id="app"]/div/section/div/h2/a',
+            app_id_input: '//*[@id="app"]/div/div[2]/header/div[2]/div/div[1]/input',
+            app_secret_input: '//*[@id="app"]/div/div[2]/header/div[2]/div/div[2]/input',
+            show_button: '//*[@id="app"]/div/div[2]/header/div[2]/div/div[2]/div/button',
+            pinterest_site_url_input: '//*[@id="app"]/div/div[2]/section[3]/div/div[1]/label[1]/input',
+            pinterest_redirect_url_input: '//*[@id="app"]/div/div[2]/section[3]/div/div[1]/label[2]/div/div/input',
+            delete_redirect_url_icon: '//*[@id="app"]/div/div[2]/section[3]/div/div[1]/label[2]/div/ul/li/div/span[2]',
         },
 
         yahoo:{
@@ -499,6 +515,27 @@ module.exports = {
 
             //BO
             vkontakte_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            vkontakte_config_btn: '//*[@id="navtabs16"]/li[19]/a',
+            vkontakte_developers_link: '//*[@id="vkontakte"]/div/div/fieldset/div[3]/a',
+            site_address_input: '//*[@id="vkontakte"]/div/div/fieldset/div[6]/input',
+            customer_key_input: '//*[@id="vci"]',
+            customer_secret_input: '//*[@id="vcs"]',
+            save_button: '//*[@id="module_form_submit_btn_33"]',
+
+            //vkontakte site
+            vkontakte_username_input: '//*[@id="email"]',
+            vkontakte_password_input: '//*[@id="pass"]',
+            vkontakte_signin_button: '//*[@id="login_button"]',
+            my_apps_menu: '//*[@id="dev_top_apps"]',
+            app_link: '//*[@id="apps_list_content"]/div/div/div[2]/div[1]/a',
+            manage_button: '//*[@id="apps_list_content"]/div/div/div[4]/a',
+            settings_subtab: '//*[@id="apps_nav_options"]',
+            id_text: '//*[@id="app_edit_cont"]/div[2]/table[1]/tbody/tr[1]/td[2]/b',
+            secret_key_input: '//*[@id="app_secret2"]',
+            site_url_input: '//*[@id="app_site_url"]',
+            delete_base_domain_icon: '//*[@id="apps_edit_domain_cont"]/div/div[1]/div[1]/div/a/div',
+            domain_input: '//*[@id="apps_edit_domain_cont"]/div/div[1]/div[2]/input',
+            vkontakte_save_button: '//*[@id="app_save_btn"]',
         },
 
 		first_facebook_logo: '#follow-teaser > div > a.facebook.custom-social-button-all.custom-social-button-1 > i',

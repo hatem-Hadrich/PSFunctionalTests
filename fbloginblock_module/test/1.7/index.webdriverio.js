@@ -43,6 +43,7 @@ describe('Allscenario', function(){
     // require('./scenario/BO/check_customer_connecting_with_google.webdriverio');
     //
     // /*--> Connection with Pinterest */
+    // require('./scenario/BO/configuration_app_pinterest.webdriverio');
     // require('./scenario/FO/connecting_with_pinterest.webdriverio');
     // require('./scenario/BO/check_customer_connecting_with_pinterest.webdriverio');
     //
@@ -95,7 +96,8 @@ describe('Allscenario', function(){
     // require('./scenario/FO/connecting_with_tumblr.webdriverio');
     // require('./scenario/BO/check_customer_connecting_with_tumblr.webdriverio');
     //
-    // /*--> Connection with Vkontakte */
+    // /*--> Connection with Vkontakte */ OK
+    // require('./scenario/BO/configuration_app_vkontakte.webdriverio');
     // require('./scenario/FO/connecting_with_vkontakte.webdriverio');
     // require('./scenario/BO/check_customer_connecting_with_vkontakte.webdriverio');
     //

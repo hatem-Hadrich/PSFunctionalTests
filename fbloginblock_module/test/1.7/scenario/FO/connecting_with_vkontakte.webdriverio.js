@@ -29,10 +29,7 @@ describe('Connecting with vkontakte in front office', function() {
             global.fctname = this.test.title;
             this.client
                 .waitForExist(this.selector.vkontakte.first_vkontakte_logo, 90000)
-                .moveToObject(this.selector.vkontakte.first_vkontakte_url)
-                .getAttribute(this.selector.vkontakte.first_vkontakte_url, 'onclick').then(function (url) {
-                globals.vkontakte_location = (url.split('window.open(').pop().split(", 'login'").shift()).slice(1, -1);
-            })
+                .click(this.selector.vkontakte.first_vkontakte_logo)
                 .call(done);
 
         });
@@ -44,7 +41,9 @@ describe('Connecting with vkontakte in front office', function() {
         it('should acces to vkontakte site', function (done) {
             global.fctname = this.test.title;
             this.client
-                .url(globals.vkontakte_location)
+                .windowHandles().then(function (handles) {
+                return this.switchTab(handles.value[handles.value.length - 1]);
+            })
                 .call(done);
         });
 
@@ -65,7 +64,10 @@ describe('Connecting with vkontakte in front office', function() {
         it('should open the shop', function (done) {
             global.fctname = this.test.title;
             this.client
-                .url('https://' + URL)
+                .windowHandles().then(function (handles) {
+                this.close(handles.value[handles.value.length - 1]);
+                return this.switchTab(handles.value[0]);
+            })
                 .call(done);
 
         });
