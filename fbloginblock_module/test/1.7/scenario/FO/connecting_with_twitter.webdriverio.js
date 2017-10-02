@@ -28,10 +28,8 @@ describe('Connecting with twitter in front office', function() {
             global.fctname = this.test.title;
             this.client
                 .waitForExist(this.selector.twitter.first_twitter_logo, 90000)
-                .moveToObject(this.selector.twitter.first_twitter_url)
-                .getAttribute(this.selector.twitter.first_twitter_url, 'onclick').then(function (url) {
-                globals.twitter_location = (url.split('window.open(').pop().split(", 'login'").shift()).slice(1, -1);
-            })
+                .click(this.selector.twitter.first_twitter_logo)
+                .pause(3000)
                 .call(done);
         });
     });
@@ -41,7 +39,9 @@ describe('Connecting with twitter in front office', function() {
         it('should acces to twitter site', function (done) {
             global.fctname = this.test.title;
             this.client
-                .url(globals.twitter_location)
+                .windowHandles().then(function (handles) {
+                    return this.switchTab(handles.value[handles.value.length - 1]);
+                })
                 .call(done);
         });
 
@@ -62,7 +62,10 @@ describe('Connecting with twitter in front office', function() {
         it('should open the shop', function (done) {
             global.fctname = this.test.title;
             this.client
-                .url('https://' + URL)
+                .windowHandles().then(function (handles) {
+                    this.close(handles.value[handles.value.length - 1]);
+                    return this.switchTab(handles.value[0]);
+                })
                 .call(done);
 
         });

@@ -69,32 +69,4 @@ describe('Check customer connecting with github in back office', function() {
                 .call(done);
         });
     });
-
-    // describe('Access to the Front Office', function() {
-    //     it('should check the github customer connection ', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .url('https://' + URL)
-    //             .waitForExist(this.selector.access_loginFO, 90000)
-    //             .click(this.selector.access_loginFO)
-    //             .waitForExist(this.selector.loginFO, 90000)
-    //             .setValue(this.selector.loginFO, 'prestotests+github@gmail.com')
-    //             .setValue(this.selector.passwordFO, 'presto_tests1')
-    //             .click(this.selector.login_btnFO)
-    //             .call(done);
-    //
-    //     });
-    // });
-    //
-    // describe('Log out in Front Office', function (done) {
-    //     it('should logout successfully in FO', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .waitForExist(this.selector.logoutFO, 90000)
-    //             .click(this.selector.logoutFO)
-    //             .waitForExist(this.selector.access_loginFO, 90000)
-    //             .call(done);
-    //
-    //     });
-    // });
 });

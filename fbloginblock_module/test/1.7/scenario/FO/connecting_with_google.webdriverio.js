@@ -29,10 +29,7 @@ describe('Connecting with google in front office', function() {
             global.fctname = this.test.title;
             this.client
                 .waitForExist(this.selector.google.first_google_logo, 90000)
-                .moveToObject(this.selector.google.first_google_url)
-                .getAttribute(this.selector.google.first_google_url, 'onclick').then(function (url) {
-                globals.google_location = (url.split('window.open(').pop().split(", 'login'").shift()).slice(1, -1);
-            })
+                .click(this.selector.google.first_google_logo)
                 .call(done);
 
         });
@@ -44,7 +41,9 @@ describe('Connecting with google in front office', function() {
         it('should acces to google site', function (done) {
             global.fctname = this.test.title;
             this.client
-                .url(globals.google_location)
+                .windowHandles().then(function (handles) {
+                return this.switchTab(handles.value[handles.value.length - 1]);
+            })
                 .call(done);
         });
 
@@ -75,7 +74,10 @@ describe('Connecting with google in front office', function() {
         it('should open the shop', function (done) {
             global.fctname = this.test.title;
             this.client
-                .url('https://' + URL)
+                .windowHandles().then(function (handles) {
+                this.close(handles.value[handles.value.length - 1]);
+                return this.switchTab(handles.value[0]);
+            })
                 .call(done);
 
         });

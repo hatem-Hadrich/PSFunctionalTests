@@ -29,12 +29,8 @@ describe('Connecting with linkedin in front office', function() {
             global.fctname = this.test.title;
             this.client
                 .waitForExist(this.selector.linkedin.first_linkedin_logo, 90000)
-                .moveToObject(this.selector.linkedin.first_linkedin_url)
-                .getAttribute(this.selector.linkedin.first_linkedin_url, 'onclick').then(function (url) {
-                globals.linkedin_location = (url.split('window.open(').pop().split(", 'login'").shift()).slice(1, -1);
-            })
+                .click(this.selector.linkedin.first_linkedin_logo)
                 .call(done);
-
         });
     });
 
@@ -44,7 +40,9 @@ describe('Connecting with linkedin in front office', function() {
         it('should acces to linkedin site', function (done) {
             global.fctname = this.test.title;
             this.client
-                .url(globals.linkedin_location)
+                .windowHandles().then(function (handles) {
+                return this.switchTab(handles.value[handles.value.length - 1]);
+            })
                 .call(done);
         });
 
@@ -65,7 +63,10 @@ describe('Connecting with linkedin in front office', function() {
         it('should open the shop', function (done) {
             global.fctname = this.test.title;
             this.client
-                .url('https://' + URL)
+                .windowHandles().then(function (handles) {
+                this.close(handles.value[handles.value.length - 1]);
+                return this.switchTab(handles.value[0]);
+            })
                 .call(done);
 
         });

@@ -29,10 +29,7 @@ describe('Connecting with wordpress in front office', function() {
             global.fctname = this.test.title;
             this.client
                 .waitForExist(this.selector.wordpress.first_wordpress_logo, 90000)
-                .moveToObject(this.selector.wordpress.first_wordpress_url)
-                .getAttribute(this.selector.wordpress.first_wordpress_url, 'onclick').then(function (url) {
-                globals.wordpress_location = (url.split('window.open(').pop().split(", 'login'").shift()).slice(1, -1);
-            })
+                .click(this.selector.wordpress.first_wordpress_logo)
                 .call(done);
 
         });
@@ -44,15 +41,17 @@ describe('Connecting with wordpress in front office', function() {
         it('should acces to wordpress site', function (done) {
             global.fctname = this.test.title;
             this.client
-                .url(globals.wordpress_location)
+                .windowHandles().then(function (handles) {
+                return this.switchTab(handles.value[handles.value.length - 1]);
+            })
                 .call(done);
         });
 
         it('should connecting with wordpress account', function (done) {
             global.fctname = this.test.title;
             this.client
-                .pause(3000)
-                .waitForExist(this.selector.wordpress.username_input, 90000)
+                .pause(7000)
+                .waitForVisible(this.selector.wordpress.username_input, 90000)
                 .click(this.selector.wordpress.username_input)
                 .setValue(this.selector.wordpress.username_input, 'prestotests+wordpress@gmail.com')
                 .click(this.selector.wordpress.password_input)
@@ -78,7 +77,10 @@ describe('Connecting with wordpress in front office', function() {
         it('should open the shop', function (done) {
             global.fctname = this.test.title;
             this.client
-                .url('https://' + URL)
+                .windowHandles().then(function (handles) {
+                this.close(handles.value[handles.value.length - 1]);
+                return this.switchTab(handles.value[0]);
+            })
                 .call(done);
         });
         it('should check the connection', function (done) {

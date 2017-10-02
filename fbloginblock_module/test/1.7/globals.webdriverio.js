@@ -38,13 +38,15 @@ module.exports = {
 		login_btn: '[name="submitLogin"]',
         menu: '#nav-sidebar',
         modules_menu: '#subtab-AdminParentModulesSf',
-        modules_installed: '(//div[@class="page-head-tabs"]/a)[2]',
+        //modules_installed: '(//div[@class="page-head-tabs"]/a)[2]',
+        modules_installed: '(//div[@class="page-head-tabs"]/a)[1]',
         modules_page_loaded: '.module-search-result-wording',
         module_tech_name: '//div[@data-tech-name="' + module_tech_name + '" and not(@style)]',
         modules_search: '.pstaggerAddTagInput.module-tags-input',
         modules_search_button: '#main-div > div.content-div > div.row > div > div.row > div > div.module-top-menu > div > div.col-md-8 > div > button',
 		module_conf_btn: '//*[@id="modules-list-container-all"]/div/div/div/div[5]/div[2]/form/button',
 		facebook_config_btn: '//*[@id="navtabs16"]/li[4]/a',
+
 		facebook_appl_id: '//*[@id="appid"]',
 		facebook_secret_key: '//*[@id="secret"]',
 		save_facebook_configuration_btn: '//*[@id="module_form_submit_btn_18"]/i',
@@ -85,7 +87,30 @@ module.exports = {
             user_connected_span: '//*[@id="_desktop_user_info"]/div/a[2]/span',
 
             //BO
-            twitter_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            //twitter_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            twitter_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[5]/img',
+            twitter_config_btn: '//*[@id="navtabs16"]/li[5]/a',
+            twitter_developers_link: '//*[@id="twitter"]/div/div/fieldset/div[3]/a',
+            website_field_input: '//*[@id="twitter"]/div/div/fieldset/div[8]/input',
+            callback_field_input: '//*[@id="twitter"]/div/div/fieldset/div[9]/input',
+            customer_key_input: '//*[@id="twitterconskey"]',
+            customer_secret_input: '//*[@id="twitterconssecret"]',
+            twitter_save_button: '//*[@id="module_form_submit_btn_19"]',
+
+            //twitter site
+            signein_button: '//*[@id="gaz-content-body"]/div[2]/div/a',
+            signein_login_input : '//*[@id="page-container"]/div/div[1]/form/fieldset/div[1]/input',
+            signein_password_input : '//*[@id="page-container"]/div/div[1]/form/fieldset/div[2]/input',
+            signein_connect_input : '//*[@id="page-container"]/div/div[1]/form/div[2]/button',
+            //app_link : '//*[@id="gaz-content-body"]/div[3]/div/ul/li[2]/div/div[2]/h2/a',
+            app_link : '//*[@id="gaz-content-body"]/div[3]/div/ul/li[1]/div/div[2]/h2/a',
+            settings_tab : '//*[@id="gaz-content-body"]/div[2]/ul/li[2]/a',
+            key_and_access_tokens_tab : '//*[@id="gaz-content-body"]/div[2]/ul/li[3]/a',
+            website_url_input : '//*[@id="edit-url"]',
+            callback_url_input : '//*[@id="edit-callback-url"]',
+            update_settings_button : '//*[@id="edit-submit"]',
+            customer_api_key: '//*[@id="gaz-content-body"]/div[3]/div/div[2]/div[1]/span[2]',
+            customer_api_secret: '//*[@id="gaz-content-body"]/div[3]/div/div[2]/div[2]/span[2]',
         },
 
         amazon:{
@@ -99,6 +124,7 @@ module.exports = {
 
             //BO
             amazon_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            amazon_config_btn: '//*[@id="navtabs16"]/li[6]/a',
         },
 
         google:{
@@ -113,6 +139,31 @@ module.exports = {
 
             //BO
             google_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            google_config_btn: '//*[@id="navtabs16"]/li[7]/a',
+            authorized_javaScript_origins_input: '//*[@id="google"]/div/div/fieldset/div[21]/input',
+            authorized_redirect_uri_input: '//*[@id="google"]/div/div/fieldset/div[22]/input',
+            google_developers_link: '//*[@id="google"]/div/div/fieldset/div[9]/a',
+            google_customer_id_input: '//*[@id="oci"]',
+            google_customer_secret_input: '//*[@id="ocs"]',
+            google_save_button: '//*[@id="module_form_submit_btn_21"]',
+
+            //google site
+            app_link: '//*[@id="p6n-project-table"]/tbody/tr[5]/td[2]/a',
+            settings_button: '//pan-platform-bar-button[@class="p6n-console-nav-button p6n-console-nav-button-container"]/button',
+            api_and_services_menu: '//a[@class="p6n-console-nav-item-link md-button md-default-theme md-ink-ripple"]',
+            identifiants_submenu: '//*[@id="p6n-console-nav-section-flyout-menu-0"]/md-menu-item[3]/a',
+            create_identifiant_button: '//div[@class="p6n-action-bar"]/ng-include/div/a',
+            identifiant_customer_oauth_link: '//div[@class="p6n-dropdown-container"]/section/div/div/div[1]/div[2]',
+            application_web_checkbox: '//fieldset[@class="p6n-form-fieldset ng-pristine ng-invalid ng-invalid-required"]/div[1]/div[1]/label[1]/span',
+            //authorized_javaScript_input: '//span[@placeholder="http://www.example.com"]',
+            authorized_javaScript_input: '/html/body/pan-shell/div/div[2]/div/div[1]/pan-upgrade-panel-container/div/ng-transclude/div[2]/div/div/ng-transclude/div/div[2]/md-content/div/div[2]/div/form/oauth-client-editor/div/section/div/fieldset[1]/div/div/ng-form/ul/li',
+            click_outside_p: '.p6n-form-note',
+            //authorized_redirect_input: '//span[@placeholder="http://www.example.com/oauth2callback"]',
+            authorized_redirect_input: '/html/body/pan-shell/div/div[2]/div/div[1]/pan-upgrade-panel-container/div/ng-transclude/div[2]/div/div/ng-transclude/div/div[2]/md-content/div/div[2]/div/form/oauth-client-editor/div/section/div/fieldset[2]/div/div/ng-form/ul/li',
+            create_button: '//div[@class="p6n-form-buttons"]/button',
+            ok_button: '//a[@class="p6n-loading-button p6n-modal-action-button p6n-modal-action-container md-primary p6n-modal-actions-cancel-btn md-button md-ink-ripple"]',
+            api_key: '//div[@class="md-dialog-content p6n-modal-content"]/span/ng-transclude/span',
+            api_secret: '//div[@class="md-dialog-content p6n-modal-content"]/div/span/ng-transclude/span',
         },
 
         pinterest:{
@@ -152,10 +203,40 @@ module.exports = {
 		    username_input: '//*[@id="email"]',
             password_input: '//*[@id="password"]',
             login_button: '//*[@id="btnLogin"]',
+            allow_button: '//*[@id="agreeConsent"]',
             user_connected_span: '//*[@id="_desktop_user_info"]/div/a[2]/span',
 
             //BO
             paypal_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            paypal_config_btn: '//*[@id="navtabs16"]/li[9]/a',
+            return_url_input: '//*[@id="paypal"]/div/div/fieldset/div[8]/input',
+            privacy_policy_url_input: '//*[@id="paypal"]/div/div/fieldset/div[11]/input',
+            user_agreement_url_input: '//*[@id="paypal"]/div/div/fieldset/div[12]/input',
+            paypal_developers_link: '//*[@id="paypal"]/div/div/fieldset/div[3]/a',
+            log_inti_dashboard_button: '//*[@id="header"]/div[2]/div[2]/span/div/a',
+            paypal_customer_id_input: '//*[@id="clientid"]',
+            paypal_customer_secret_input: '//*[@id="psecret"]',
+            paypal_save_button: '//*[@id="module_form_submit_btn_23"]',
+
+            //paypal site
+            manage_api_button: '//*[@id="main"]/div/div[2]/div/a[3]',
+            app_link: '//div[@class="content-wrapper"]/table/tbody/tr[2]/td[1]/a',
+            live_button: '//*[@id="liveBtn"]',
+            show_secret_button: '//*[@id="credentialsLive-live-view"]/div/div/div[2]/div[4]/div[2]/p',
+            show_return_url_button: '//*[@id="returnUrls-live"]',
+            customer_id: '//*[@id="credentials-live"]',
+            customer_secret: '//*[@id="c-table-live"]/table/tbody/tr/td[2]',
+            live_return_url_input: '//*[@id="oauth_return_url__1-live"]',
+            //live_plus_button: '//*[@id="editUrlSection-live"]/div/button[1]',
+            log_in_with_paypal_checkbox: '//*[@id="capabilityForm-live"]/input',
+            advanced_options_button: '//*[@id="capabilityForm-live"]/span/span',
+            personnal_information_checkbox: '//*[@id="personalCheckBox-live"]',
+            address_information_checkbox: '//*[@id="addressCheckBox-live"]',
+            account_information_checkbox: '//*[@id="accountCheckBox-live"]',
+            live_privacy_policy_url_input: '//*[@id="privacy_policy_url-live"]',
+            live_user_agreement_url_input: '//*[@id="user_agreement_url-live"]',
+            live_save_button: '//*[@id="saveBtn-live"]',
+            feedback_button: '//*[@id="applications"]/main/div/article/div[2]/a',
         },
 
         linkedin:{
@@ -169,6 +250,24 @@ module.exports = {
 
             //BO
             linkedin_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            linkedin_config_btn: '//*[@id="navtabs16"]/li[10]/a',
+            website_url_input: '//*[@id="linkedin"]/div/div/fieldset/div[11]/input',
+            linkedin_developers_link: '//*[@id="linkedin"]/div/div/fieldset/div[3]/a',
+            linkedin_customer_id_input: '//*[@id="lapikey"]',
+            linkedin_customer_secret_input: '//*[@id="lsecret"]',
+            linkedin_save_button: '//*[@id="module_form_submit_btn_24"]',
+
+            //linkedin site
+            linkedin_identify_button: '//*[@id="uno-reg-join"]/div/div/div/div[2]/div[1]/div/div/p/a',
+            linkedin_username_input: '//*[@id="session_key-login"]',
+            linkedin_password_input: '//*[@id="session_password-login"]',
+            linkedin_signin_button: '//*[@id="btn-primary"]',
+            app_link: '//*[@id="app-bristol"]/div[2]/a',
+            linkedin_preferences_button: '//*[@id="filter-tablist"]/li[2]/a',
+            linkedin_website_url_input: '//*[@id="websiteUrl"]',
+            linkedin_update_button: '//*[@id="control_gen_1"]/form/ul[11]/li/p/button[1]',
+            customer_id_span: '//*[@id="control_gen_1"]/form/ul[1]/li/table/tbody/tr[1]/td[2]/span',
+            customer_secret_span: '//*[@id="control_gen_1"]/form/ul[1]/li/table/tbody/tr[3]/td[2]/span',
         },
 
         microsoft:{
@@ -178,10 +277,27 @@ module.exports = {
 		    username_input: '//*[@id="i0116"]',
             password_input: '//*[@id="i0118"]',
             next_button: '//*[@id="idSIButton9"]',
+            accept_button: '//*[@id="idBtn_Accept"]',
             user_connected_span: '//*[@id="_desktop_user_info"]/div/a[2]/span',
 
             //BO
             microsoft_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            microsoft_config_btn: '//*[@id="navtabs16"]/li[11]/a',
+            redirect_url_input: '//*[@id="hotmail"]/div/div/fieldset/div[8]/input',
+            microsoft_developers_link: '//*[@id="hotmail"]/div/div/fieldset/div[3]/a',
+            microsoft_customer_id_input: '//*[@id="mclientid"]',
+            microsoft_customer_secret_input: '//*[@id="mclientsecret"]',
+            microsoft_save_button: '//*[@id="module_form_submit_btn_25"]',
+
+            //microsoft site
+            app_link: '//*[@id="000000004C1DDC8F"]',
+            customer_id_div: '//*[@id="main"]/div/section/form/div[1]/div[1]/div/div[4]/div[2]/div',
+            customer_secret_td: '//table/tbody/tr[@class="ng-scope"]/td[1]',
+            microsoft_redirect_url_input: '//*[@id="replyUrl"]',
+            add_profile_button: '//*[@id="UploadLogoBtn"]/div[1]/div[2]',
+            cancel_button: '//*[@id="cancelbutton"]',
+            save_button: '//button[@class="btn btn-primary" and @type="submit" and @name="AppSaveBtn"]',//.btn.btn-primary
+
         },
 
         foursquare:{
@@ -195,6 +311,24 @@ module.exports = {
 
             //BO
             foursquare_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            foursquare_config_btn: '//*[@id="navtabs16"]/li[12]/a',
+            redirect_url_input: '//*[@id="foursquare"]/div/div/fieldset/div[9]/input',
+            welcome_page_url_input: '//*[@id="foursquare"]/div/div/fieldset/div[7]/input',
+            privacy_policy_url_input: '//*[@id="foursquare"]/div/div/fieldset/div[8]/input',
+            foursquare_developers_link: '//*[@id="foursquare"]/div/div/fieldset/div[3]/a',
+            foursquare_customer_id_input: '//*[@id="fsci"]',
+            foursquare_customer_secret_input: '//*[@id="fscs"]',
+            foursquare_save_button: '//*[@id="module_form_submit_btn_26"]',
+
+            //foursquare site
+            app_link: '//*[@id="createdApps"]/div[1]/div/div[1]/h3/a',
+            foursquare_update_button: '//*[@id="developerDetails"]/div[1]/a[1]',
+            foursquare_application_uri_input: '//*[@id="applicationUri"]',
+            foursquare_privacy_policy_url_input: '//*[@id="privacyPolicyUri"]',
+            foursquare_redirect_url_input: '//*[@id="callbackUri"]',
+            save_button: '//*[@id="appTextProperties"]/div/a',
+            foursquare_customer_id_pre: '//*[@id="developerDetails"]/div[1]/fieldset[1]/div[1]/div/pre/code',
+            foursquare_customer_secret_pre: '//*[@id="developerDetails"]/div[1]/fieldset[1]/div[2]/div/pre/code',
         },
 
         github:{
@@ -208,6 +342,22 @@ module.exports = {
 
             //BO
             github_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            github_config_btn: '//*[@id="navtabs16"]/li[13]/a',
+            github_developers_link: '//*[@id="github"]/div/div/fieldset/div[3]/a',
+            home_page_url_input: '//*[@id="github"]/div/div/fieldset/div[5]/input',
+            callback_url_input: '//*[@id="github"]/div/div/fieldset/div[7]/input',
+            customer_id_input: '//*[@id="gici"]',
+            customer_key_input: '//*[@id="gics"]',
+            github_save_button: '//*[@id="module_form_submit_btn_27"]',
+
+            //github site
+            app_link: '//*[@id="js-pjax-container"]/div/div[2]/div[2]/div/div/div[1]/span[1]/a',
+            github_customer_id_dd: '//*[@id="js-pjax-container"]/div/div[2]/div[1]/div[3]/div/div/dl/dd[1]',
+            github_customer_key_dd: '//*[@id="js-pjax-container"]/div/div[2]/div[1]/div[3]/div/div/dl/dd[2]',
+            github_application_url_input: '//*[@id="oauth_application_url"]',
+            github_application_callback_url_input: '//*[@id="oauth_application_callback_url"]',
+            github_cancel_button: '//*[@id="new_oauth_application"]/p/a',
+            github_update_button: '//form[@class="edit_oauth_application"]/button',
         },
 
         disqus:{
@@ -221,6 +371,27 @@ module.exports = {
 
             //BO
             disqus_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            disqus_config_btn: '//*[@id="navtabs16"]/li[14]/a',
+            developers_link: '//*[@id="disqus"]/div/div/fieldset/div[3]/a',
+            website_url_input: '//*[@id="disqus"]/div/div/fieldset/div[8]/input',
+            callback_url_input: '//*[@id="disqus"]/div/div/fieldset/div[12]/input',
+            terms_of_service_url_input: '//*[@id="disqus"]/div/div/fieldset/div[16]/input',
+            api_key_input: '//*[@id="dci"]',
+            api_secret_input: '//*[@id="dcs"]',
+            disqus_save_button: '//*[@id="module_form_submit_btn_28"]',
+
+            //disqus site
+            disqus_username_input: '//*[@id="username-input"]',
+            disqus_password_input: '//*[@id="password-input"]',
+            disqus_login_button: '.button.submit',
+            app_link: '//*[@id="api-account-list"]/li/h3/a',
+            api_key_pre: '//*[@id="content"]/div/div[2]/div[2]/form/div[2]/div[2]/fieldset[2]/div[1]/pre',
+            api_secret_pre: '//*[@id="content"]/div/div[2]/div[2]/form/div[2]/div[2]/fieldset[2]/div[2]/pre',
+            settings_subtab: '//*[@id="content"]/div/div[2]/div[2]/form/div[2]/div[1]/ul/li[2]/a',
+            website_input: '//*[@id="id_website"]',
+            callback_input: '//*[@id="id_callback_url"]',
+            terms_of_service_input: '//*[@id="id_terms_url"]',
+            save_changes_button: '.button',
         },
 
         dropbox:{
@@ -235,6 +406,23 @@ module.exports = {
 
             //BO
             dropbox_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            dropbox_config_btn: '//*[@id="navtabs16"]/li[15]/a',
+            redirect_uri_input: '//*[@id="dropbox"]/div/div/fieldset/div[10]/input',
+            developers_link: '//*[@id="dropbox"]/div/div/fieldset/div[3]/a',
+            api_key_input: '//*[@id="dbci"]',
+            api_secret_input: '//*[@id="dbcs"]',
+            dropbox_save_button: '//*[@id="module_form_submit_btn_29"]',
+
+            //dropbox site
+            dropbox_username_input: '//*[@id="regular-login-forms"]/form[1]/div[1]/div[1]/div[2]/input',
+            dropbox_password_input: '//*[@id="regular-login-forms"]/form[1]/div[1]/div[2]/div[2]/input',
+            dropbox_login_button: '.login-button.button-primary',
+            app_link: '//*[@id="right-content"]/div[2]/div/div[2]/div[1]/a',
+            delete_redirect_uri: '//*[@id="oauth-uri-list"]/div/div/img',
+            dropbox_redirect_uri_input: '//*[@id="oauth-add-uri-form"]/input[3]',
+            dropbox_redirect_uri_add_button: '//*[@id="oauth-add-uri-form"]/input[4]',
+            dropbox_app_key_div: '//*[@id="config-content"]/table/tbody/tr[5]/td[2]/div',
+            dropbox_app_secret_div: '//*[@id="config-content"]/table/tbody/tr[6]/td[2]/div',
         },
 
         wordpress:{
@@ -249,6 +437,24 @@ module.exports = {
 
             //BO
             wordpress_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            wordpress_config_btn: '//*[@id="navtabs16"]/li[16]/a',
+            developers_link: '//*[@id="wordpress"]/div/div/fieldset/div[3]/a',
+            website_url_input: '//*[@id="wordpress"]/div/div/fieldset/div[7]/input',
+            redirect_uri_input: '//*[@id="wordpress"]/div/div/fieldset/div[8]/input',
+            javascript_origins_input: '//*[@id="wordpress"]/div/div/fieldset/div[9]/input',
+            customer_id_input: '//*[@id="wci"]',
+            customer_key_input: '//*[@id="wcs"]',
+            save_button: '//*[@id="module_form_submit_btn_30"]',
+
+            //wordpress site
+            app_link: '//*[@id="content"]/ul/li/div/h2/a',
+            manage_settings_subtab: '//*[@id="content"]/div[2]/div[2]/ul/li[1]/a',
+            customer_id_td: '//*[@id="content"]/div[3]/div[2]/table/tbody/tr[1]/td',
+            customer_secret_td: '//*[@id="content"]/div[3]/div[2]/table/tbody/tr[2]/td',
+            wordpress_website_url_input: '//*[@id="url"]',
+            wordpress_redirect_uri_input: '//*[@id="redirect_uri"]',
+            wordpress_javascript_origins_input: '//*[@id="javascript_origins"]',
+            wordpress_update_button: '.button-primary',
         },
 
         tumblr:{
@@ -263,6 +469,23 @@ module.exports = {
 
             //BO
             tumblr_logo_customer_page: '//*[@id="form-customer"]/div/div[2]/table/tbody/tr/td[6]/img',
+            tumblr_config_btn: '//*[@id="navtabs16"]/li[17]/a',
+            tumblr_developers_link: '//*[@id="tumblr"]/div/div/fieldset/div[3]/a',
+            website_url_input: '//*[@id="tumblr"]/div/div/fieldset/div[6]/input',
+            callback_url_input: '//*[@id="tumblr"]/div/div/fieldset/div[8]/input',
+            customer_key_input: '//*[@id="tuci"]',
+            customer_secret_input: '//*[@id="tucs"]',
+            save_button: '//*[@id="module_form_submit_btn_31"]',
+
+            //wordpress site
+            signin_button: '//*[@id="signup_forms_submit"]/span[6]',
+            app_link: '//*[@id="dashboard_account_oauth_apps"]/div[4]/div/div/div[2]/a[2]',
+            tumblr_website_url_input:'//*[@id="oac_url"]',
+            tumblr_callback_url_input:'//*[@id="oac_default_callback_url"]',
+            tumblr_save_button:'//*[@id="save_button"]',
+            tumblr_customer_id:'//*[@id="dashboard_account_register_oauth_app"]/div[4]/div/div/span[1]',
+            tumblr_customer_secret:'//*[@id="secret"]',
+            tumblr_show_secret_button:'//*[@id="secret_toggle"]',
         },
 
         vkontakte:{

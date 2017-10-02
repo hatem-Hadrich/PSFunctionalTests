@@ -29,10 +29,7 @@ describe('Connecting with foursquare in front office', function() {
             global.fctname = this.test.title;
             this.client
                 .waitForExist(this.selector.foursquare.first_foursquare_logo, 90000)
-                .moveToObject(this.selector.foursquare.first_foursquare_url)
-                .getAttribute(this.selector.foursquare.first_foursquare_url, 'onclick').then(function (url) {
-                globals.foursquare_location = (url.split('window.open(').pop().split(", 'login'").shift()).slice(1, -1);
-            })
+                .click(this.selector.foursquare.first_foursquare_logo)
                 .call(done);
 
         });
@@ -44,7 +41,9 @@ describe('Connecting with foursquare in front office', function() {
         it('should acces to foursquare site', function (done) {
             global.fctname = this.test.title;
             this.client
-                .url(globals.foursquare_location)
+                .windowHandles().then(function (handles) {
+                return this.switchTab(handles.value[handles.value.length - 1]);
+            })
                 .call(done);
         });
 
@@ -66,7 +65,10 @@ describe('Connecting with foursquare in front office', function() {
         it('should open the shop', function (done) {
             global.fctname = this.test.title;
             this.client
-                .url('https://' + URL)
+                .windowHandles().then(function (handles) {
+                this.close(handles.value[handles.value.length - 1]);
+                return this.switchTab(handles.value[0]);
+            })
                 .call(done);
 
         });

@@ -37,19 +37,19 @@ describe('Check customer connecting with twitter in back office', function() {
                 .click(this.selector.customer_menu)
                 .call(done);
         });
-        it('should filter the list by address email', function (done) {
-            this.client
-                .waitForExist(this.selector.customer_address_email_input, 90000)
-                .setValue(this.selector.customer_address_email_input, 'prestotests+twitter@gmail.com')
-                .call(done);
-        });
-        it('should click on search button', function (done) {
-            this.client
-                .pause(3000)
-                .waitForExist(this.selector.customer_search_button, 90000)
-                .click(this.selector.customer_search_button)
-                .call(done);
-        });
+        // it('should filter the list by address email', function (done) {
+        //     this.client
+        //         .waitForExist(this.selector.customer_address_email_input, 90000)
+        //         .setValue(this.selector.customer_address_email_input, 'prestotests+twitter@gmail.com')
+        //         .call(done);
+        // });
+        // it('should click on search button', function (done) {
+        //     this.client
+        //         .pause(3000)
+        //         .waitForExist(this.selector.customer_search_button, 90000)
+        //         .click(this.selector.customer_search_button)
+        //         .call(done);
+        // });
 
         it('should check new twitter customer', function (done) {
             this.client
@@ -69,30 +69,4 @@ describe('Check customer connecting with twitter in back office', function() {
                 .call(done);
         });
     });
-
-    // describe('Access to the Front Office', function() {
-    //     it('should check the twitter customer connection ', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .url('https://' + URL)
-    //             .waitForExist(this.selector.access_loginFO, 90000)
-    //             .click(this.selector.access_loginFO)
-    //             .waitForExist(this.selector.loginFO, 90000)
-    //             .setValue(this.selector.loginFO, 'prestotests+twitter@gmail.com')
-    //             .setValue(this.selector.passwordFO, 'presto_tests')
-    //             .click(this.selector.login_btnFO)
-    //             .call(done);
-    //     });
-    // });
-    //
-    // describe('Log out in Front Office', function (done) {
-    //     it('should logout successfully in FO', function (done) {
-    //         global.fctname = this.test.title;
-    //         this.client
-    //             .waitForExist(this.selector.logoutFO, 90000)
-    //             .click(this.selector.logoutFO)
-    //             .waitForExist(this.selector.access_loginFO, 90000)
-    //             .call(done);
-    //     });
-    // });
 });

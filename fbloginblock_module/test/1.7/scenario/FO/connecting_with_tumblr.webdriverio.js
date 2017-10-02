@@ -29,10 +29,7 @@ describe('Connecting with tumblr in front office', function() {
             global.fctname = this.test.title;
             this.client
                 .waitForExist(this.selector.tumblr.first_tumblr_logo, 90000)
-                .moveToObject(this.selector.tumblr.first_tumblr_url)
-                .getAttribute(this.selector.tumblr.first_tumblr_url, 'onclick').then(function (url) {
-                globals.tumblr_location = (url.split('window.open(').pop().split(", 'login'").shift()).slice(1, -1);
-            })
+                .click(this.selector.tumblr.first_tumblr_logo)
                 .call(done);
 
         });
@@ -44,8 +41,9 @@ describe('Connecting with tumblr in front office', function() {
         it('should acces to tumblr site', function (done) {
             global.fctname = this.test.title;
             this.client
-                .pause(3000)
-                .url(globals.tumblr_location)
+                .windowHandles().then(function (handles) {
+                return this.switchTab(handles.value[handles.value.length - 1]);
+            })
                 .call(done);
         });
 
@@ -76,7 +74,10 @@ describe('Connecting with tumblr in front office', function() {
         it('should open the shop', function (done) {
             global.fctname = this.test.title;
             this.client
-                .url('https://' + URL)
+                .windowHandles().then(function (handles) {
+                this.close(handles.value[handles.value.length - 1]);
+                return this.switchTab(handles.value[0]);
+            })
                 .call(done);
 
         });
