@@ -162,7 +162,6 @@ describe('Configuration app of tumblr in back office', function() {
                 .pause(5000)
                 .getTabIds().then(function(handles){
                 this.close(handles[handles.length - 1]);
-                this.close(handles[handles.length - 2]);
                 return this.switchTab(handles[0])
             })
                 .call(done);

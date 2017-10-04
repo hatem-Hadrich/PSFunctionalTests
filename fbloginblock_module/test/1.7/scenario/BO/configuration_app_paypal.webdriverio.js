@@ -122,14 +122,14 @@ describe('Configuration app of paypal in back office', function() {
                 .call(done);
         });
 
-        it('should click on live button', function (done) {
-            this.client
-                .pause(3000)
-                .moveToObject(this.selector.paypal.live_button, 90000)
-                .click(this.selector.paypal.live_button)
-                .pause(7000)
-                .call(done);
-        });
+        // it('should click on live button', function (done) {
+        //     this.client
+        //         .pause(3000)
+        //         .moveToObject(this.selector.paypal.live_button, 90000)
+        //         .click(this.selector.paypal.live_button)
+        //         .pause(7000)
+        //         .call(done);
+        // });
 
         it('should click on show secret button', function (done) {
             this.client
@@ -138,9 +138,9 @@ describe('Configuration app of paypal in back office', function() {
                 global.paypal_customer_key = id;
                 console.log(global.paypal_customer_key);
             })
-                .moveToObject(this.selector.paypal.show_secret_button)
+                .waitForExist(this.selector.paypal.show_secret_button, 90000)
                 .click(this.selector.paypal.show_secret_button)
-                .pause(5000)
+                .pause(7000)
                 .moveToObject(this.selector.paypal.customer_secret)
                 .getText(this.selector.paypal.customer_secret).then(function (value) {
                 global.paypal_customer_secret = value;
@@ -159,9 +159,9 @@ describe('Configuration app of paypal in back office', function() {
 
         it('should enter the return url', function (done) {
             this.client
-                .waitForExist(this.selector.paypal.live_return_url_input, 90000)
-                .click(this.selector.paypal.live_return_url_input)
-                .setValue(this.selector.paypal.live_return_url_input, global.return_url)
+                .waitForExist(this.selector.paypal.paypal_return_url_input, 90000)
+                .click(this.selector.paypal.paypal_return_url_input)
+                .setValue(this.selector.paypal.paypal_return_url_input, global.return_url)
                 .call(done);
         });
 
@@ -170,16 +170,6 @@ describe('Configuration app of paypal in back office', function() {
                 .moveToObject(this.selector.paypal.feedback_button)
                 .waitForExist(this.selector.paypal.advanced_options_button, 90000)
                 .click(this.selector.paypal.advanced_options_button)
-                .call(done);
-        });
-
-        it('should configure the informations requested from customers', function (done) {
-            this.client
-                .pause(5000)
-                .moveToObject(this.selector.paypal.live_privacy_policy_url_input, 90000)
-                .click(this.selector.paypal.personnal_information_checkbox)
-                .click(this.selector.paypal.address_information_checkbox)
-                .click(this.selector.paypal.account_information_checkbox)
                 .call(done);
         });
 

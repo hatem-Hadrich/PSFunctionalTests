@@ -51,7 +51,7 @@ describe('Allscenario', function(){
     // require('./scenario/FO/connecting_with_yahoo.webdriverio');
     // require('./scenario/BO/check_customer_connecting_with_yahoo.webdriverio');
     //
-    // /*--> Connection with Paypal */ OK just the button live
+    // /*--> Connection with Paypal */ OK TOFIX
     // require('./scenario/BO/configuration_app_paypal.webdriverio');
     // require('./scenario/FO/connecting_with_paypal.webdriverio');
     // require('./scenario/BO/check_customer_connecting_with_paypal.webdriverio');
